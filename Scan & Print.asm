@@ -1,0 +1,17 @@
+.STACK 100H
+.MODEL SMALL
+.DATA
+.CODE
+
+MAIN PROC
+    
+    MOV AH,1	;SCAN
+    INT 21H
+    
+    MOV AH,2
+    MOV DL,AL	;PRINT
+    INT 21H
+    
+    MAIN ENDP
+
+END MAIN
